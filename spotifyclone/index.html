@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+
+        }
+        .left{
+            color:black;
+            width:20%;
+            border: 2px solid black;
+            background-color: black;
+           
+        }
+        
+        .home{
+            height: 25vh;
+            border:1px solid black;
+            display: flex;
+            background-color: rgb(33, 33, 33);
+            padding: 3px;
+            border-radius: 5px;
+            flex-direction: column;
+           justify-content: center;
+        }
+        
+        
+        .home ul li{
+            display: flex;
+           align-items:  center;
+            gap: 15px;
+            filter:invert(100%);
+            padding: 7px;
+            text-decoration: solid;
+            font-weight: bolder;
+        }
+        .home ul li img{
+            width: 30px;
+            
+        }
+         .logo{
+            padding:0px 12px;
+            width: 60px;
+            filter:invert(100%);
+            margin: 5px 2px;
+         }
+         .lb{
+            height: 73vh;
+            background-color: rgb(33, 33, 33);
+         }
+         .library{
+            padding: 5px;;
+            height:8vh;
+            display: flex;
+           
+            align-items: center;
+           
+            margin-top: 5px;
+            border-radius: 5px;
+          
+            background-color: rgb(33, 33, 33);
+           }
+         .lib{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            filter:invert(80%);
+            font-weight: bolder;
+         }
+         .lib:hover{
+            filter:invert(100%);
+         }
+         .lib img{
+            height: 4vh;
+            width: auto;
+           margin-right: 7px;
+         }
+          .plus{
+           position: absolute;
+           align-items: center;
+           justify-content: center;
+          color: #bebfc0;
+         
+          left:17%;
+          border-radius: 50%;
+           
+          }
+          .plus p{
+            font-size: 2rem;
+          }
+          .plus:hover{
+            color: white;
+          }
+          .sb{
+            height: 20vh;
+            display: flex;
+            flex-direction: column;
+            
+            overflow-y: scroll;
+          
+          }
+          .bx{
+           color: white;
+           background-color: rgb(73, 72, 72);
+            padding: 3px;
+            margin: 5px;
+           
+           border-radius: 5px;;
+          }
+          .bx h3{
+            margin-top: 5px;
+            padding: 3px 0px;
+
+          }
+          .bx p{
+            padding: 3px 0px;
+            
+          }
+          .bx button{
+            font-size: 0.9rem;
+            color: black;
+            border-radius: 15px;
+            padding: 8px;
+            margin: 5px 3px;
+            text-decoration-style:solid ;
+          }
+          .bx button:hover{
+            
+            font-size: 0.95rem;
+          }
+          .ll{
+          margin-top: 6vh;
+          margin-left: 5px;
+          margin-right: 5px;
+           display: flex;
+          flex-wrap: wrap;
+          }
+          .bx2{
+            font-size: 0.8rem;
+            margin:5px 5px;
+            padding: 3px;
+          }
+          .bx2 a{
+            color: #bebfc0;
+            text-decoration: none;
+
+          }
+          #cook{
+            margin-left: 10px;
+            font-size: 0.9rem;
+          }
+          #cook:hover{
+            text-decoration: underline;
+            text-decoration-color: #bebfc0;
+          }
+          #b1{
+            display: flex;
+            align-items: center;
+            filter: invert(100%);
+            padding: 8px;
+            border-radius: 24px;
+            margin: 15px 10px;
+          }
+          #b1 img{
+            height:3vh;
+          }
+          .right{
+            width:80%;
+            height:700px;
+            border: 2px solid black;
+            background-color: black;
+            overflow-y: scroll;
+        }
+        .navbar{
+            display: flex;
+            height:10vh;
+            align-items: center;
+            background-color:hsl(0, 0%, 14%) ;
+           
+            position: fixed;
+            width: 80%;
+            top: 0;
+            z-index: 1000;
+        }
+        .sign{
+            margin-left: auto;
+            display: flex;
+            margin-right: 15px;
+           align-items: center;
+        }
+        .b3{
+            background-color: hsl(0, 0%, 0%);
+            font-size: 1.6rem;
+            color: #aeaeae;
+           padding:2px 10px;
+            border-radius: 50%;
+            box-shadow: inset;
+            margin: 0px 3px;
+            
+        }
+        #b3:hover{
+            cursor: ;
+        }
+        .sign h2{
+            color: hwb(0 65% 34%);
+            font-size: 1.2rem;
+            padding: 5px;
+            margin-right: 10px;
+        }
+        .sign h2:hover{
+            color: white;
+            font-size: 1.3rem;
+        }
+        .log{
+            background-color: white;
+            padding: 10px 15px;
+            border-radius: 24px;
+            text-decoration: solid;
+            font-weight: bolder;
+            font-size: 1rem;
+        }
+        .log:hover{
+            font-size: 1.1rem;
+        }
+        .sp{
+            color:white;
+            display: flex;
+            align-items: center;
+            padding: 2px;
+           margin-top: 80px;
+           margin-bottom: 10px;
+        }
+        .sp p{
+            margin-left: auto;
+            display: flex;
+           margin-right: 30px;
+            color: #aeaeae;
+        }
+        .sp p:hover{
+            text-decoration: underline;
+        }
+        .sng{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .card{
+            display: flex;
+          align-items: center;
+            flex-direction: column;
+            height:275px;
+            width:200px;
+            background-color: #2e2e2e;
+            margin:7px;
+            color:white;
+            border-radius: 7px;
+        }
+        .card:hover{
+            background-color: rgb(111, 109, 109);
+            height:280px;
+            width:210px;
+        }
+        .card img{
+             height: 70%;
+             width: 95%;
+             padding: 10px;
+             border-radius: 5px;
+        }
+        .card h4{
+          font-size: 1.5rem;
+          margin:7px;
+
+        }
+        .card p{
+            color: #aeaeae;
+            font-size: 0.9rem;
+        }
+        .lst{
+            color: white;
+            display: flex;
+            margin: 40px 0px;
+            padding: 30px 0px;
+           border-bottom:1px solid #aeaeae;
+        }
+        .ec{
+          
+           padding: 5px;
+           margin-right: 20px;
+        }
+        .ec h3{
+            font-size: 1.05rem;
+            margin-bottom: 5px;
+        }
+        .ec p{
+            margin:12px 0px;
+        }
+        .ec p a{
+           color: #aeaeae;
+           text-decoration: none;
+          
+        }
+        .soc{
+            margin-left: auto;
+            display: flex;
+        }
+        .si{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: #2e2e2e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin:5px;
+        }
+        .si img{
+            padding:2px;
+            filter: invert(100%);
+            height:25px;
+           
+        }
+        .last{
+            height:60px;
+            color: #aeaeae;
+            margin-bottom: 40px;
+        }
+        footer {
+          background: linear-gradient(45deg, #ac0482,#8f24d1,#7d4fe1,#70a5f5
+          );
+            color: #fff;
+            height:10%;
+            position: fixed; /* or 'absolute' if you want it at the bottom of its container */
+            width: 100%;
+            bottom: 0;
+            display: flex;
+        }
+        footer h3{
+           padding:4px;
+            margin: 3px 9px;
+        }
+        footer p{
+           
+            margin-bottom: 20px;
+        }
+        .up{
+            color: black;
+            margin-left:auto ;
+            margin-right: 10px;
+            background-color: white;
+            display: flex;
+           align-items: center;
+           margin-top: 10px;
+           height: 50px;
+          padding: 5px 20px;
+          border-radius: 25px;
+          font-size: 1.2rem;
+          font-weight: bolder;
+        }
+        .up:hover{
+            font-size: 1.25rem;
+        }
+        #srch{
+            filter: invert(80%);
+        }
+        #srch:hover{
+            filter: invert(100%);
+        }
+        @media  (min-width: 350px ) and ( max-width:800px){
+            .left{
+                width:40%;
+            }
+            .right{
+                width: 60%;
+            }
+            .navbar{
+                width: 60%;
+            }
+            .plus{
+                left:35%;
+            }
+            .lst{
+                flex-wrap: wrap;
+            }
+         }
+         @media  (max-width:349px) {
+            .left{
+                width:50%;
+            }
+            .right{
+                width: 50%;
+            }
+            .navbar{
+                flex-wrap: wrap;
+                height: 100px;
+                width: 50%;
+            }
+            .plus{
+                left:35%;
+            }
+            .lst{
+                flex-wrap: wrap;
+            }
+            .card{
+                height:40%;
+                width:80%;
+            }
+            .car h4{
+                font-size: 0.5rem;
+            }
+         }
+         #slp{
+            margin-top: 20px;
+         }
+    </style>
+</head>
+<body>
+    
+     <div class="left">
+        <div class="home">
+         <div class="logo"><img src="logo.svg" alt=""></div>
+        <ul>
+            <li><img src="home.svg" alt="">Home</li>
+            <li id="srch"><img src="search.svg" alt="">Search</li>
+        </ul>
+        </div>
+        <div class="lb">
+        <div class="library">
+           <div class="lib">
+            <img src="plali.svg" alt="">
+            <p>Your Library</p>
+           </div>
+           <div class="plus">
+            <p>+</p>
+           </div>
+        </div>
+        <div class="sb">
+            <div class="bx">
+        <h3>Create Your first playlist</h3>
+        <p>It's easy, we'll help you</p>
+        <button>Create playlist</button>
+            </div>
+            <div class="bx">
+                <h3>Let's find some podcats to follow</h3>
+                <p>we'll keep you updated on new episodes</p>
+                <button>Browse podcasts</button>
+            </div>
+        </div>
+        <div class="ll">
+            <div class="bx2"><a href="#">Legal</a></div>
+            <div class="bx2"><a href="#">Privacy Center</a></div>
+            <div class="bx2"><a href="#">Privacy Policy</a></div>
+            <div class="bx2"><a href="#">Cookies</a></div>
+            <div class="bx2"><a href="#">About Ads</a></div>
+            <div class="bx2"><a href="#">Accesability</a></div>
+            
+          </div>
+          <div class="bx2" id="cook"><a href="#">Cookies</a></div>
+          <button id="b1"><img src="int-removebg-preview.png" alt=""><p>English</p></button>
+     </div>
+     
+    </div>
+     <div class="right">
+        <nav class="navbar">
+            <button class="b3"><</button>
+            <button class="b3">></button> 
+            <div class="sign">
+                <h2>Sign up</h2>
+                <button class="log">Log in</button>
+            </div>
+         </nav>
+         <div class="mb">
+            <div class="sp">
+                <h2>Spotify Playlists</h2>
+                <p>Show All</p>
+            </div>
+            <div class="sng">
+               <div class="card">
+                <img src="cover.jpg" alt="">
+                <h4>Today's top hit</h4>
+                <p>Taylor swif is the top 1 singer</p>
+               </div>
+               <div class="card">
+                <img src="cover.jpg" alt="">
+                <h4>Today's top hit</h4>
+                <p>Taylor swif is the top 1 singer</p>
+               </div>
+               <div class="card">
+                <img src="cover.jpg" alt="">
+                <h4>Today's top hit</h4>
+                <p>Taylor swif is the top 1 singer</p>
+               </div>
+               <div class="card">
+                <img src="cover.jpg" alt="">
+                <h4>Today's top hit</h4>
+                <p>Taylor swif is the top 1 singer</p>
+               </div>
+               <div class="card">
+                <img src="cover.jpg" alt="">
+                <h4>Today's top hit</h4>
+                <p>Taylor swif is the top 1 singer</p>
+               </div>
+               <div class="card">
+                <img src="cover.jpg" alt="">
+                <h4>Today's top hit</h4>
+                <p>Taylor swif is the top 1 singer</p>
+               </div>
+               
+            </div>
+            <div class="sp" id="slp">
+                <h2>Sleep</h2>
+                
+            </div>
+            <div class="sng">
+                <div class="card">
+                    <img src="cover.jpg" alt="">
+                    <h4>Today's top hit</h4>
+                    <p>Taylor swif is the top 1 singer</p>
+                   </div>
+                   <div class="card">
+                    <img src="cover.jpg" alt="">
+                    <h4>Today's top hit</h4>
+                    <p>Taylor swif is the top 1 singer</p>
+                   </div>
+                   <div class="card">
+                    <img src="cover.jpg" alt="">
+                    <h4>Today's top hit</h4>
+                    <p>Taylor swif is the top 1 singer</p>
+                   </div>
+            </div>
+         </div>
+         <div class="lst">
+            <div class="ec">
+                <h3>Company</h3>
+                <p><a href="#">About</a></p>
+                <p><a href="#">Jobs</a></p>
+                <p><a href="#">For the record</a></p>
+            </div>
+            <div class="ec">
+                <h3>Communities</h3>
+                <p><a href="#">For Artists</a></p>
+                <p><a href="#">Developers</a></p>
+                <p><a href="#">Advertising</a></p>
+                <p><a href="#">Inventors</a></p>
+                <p><a href="#">Vendors</a></p>
+            </div>
+            <div class="ec">
+                <h3>Useful links</h3>
+                <p><a href="#">Support</a></p>
+                <p><a href="#">Free Mobile App</a></p>
+            </div>
+            <div class="soc">
+                <div class="si">
+                    <img src="insta-removebg-preview.png" alt="">
+                   </div>
+                   <div class="si">
+                    <img src="twitter-removebg-preview.png" alt="">
+                </div>
+                <div class="si">
+                    <img src="meta-removebg-preview.png" alt="">
+                </div>
+            </div>
+         </div>
+         <div class="last">
+            <p>&copy 2024 Spotify AB</p>
+         </div>
+     </div>
+      
+  
+
+    </div>
+    <footer>
+        <div class="fot">
+            <h3>Preview of Spotify</h3>
+        <p>Sign up to get unlimited songs and podcasts with occassional ads. No credit card needed.</p>
+       
+        </div>
+       <div class="up">Sign up free</div>
+    </footer>
+</body>
+</html>
